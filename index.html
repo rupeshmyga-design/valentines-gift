@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Be My Valentine?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --lilac-light: #f3f0ff;
+        --lilac-medium: #e9d5ff;
+        --lilac-dark: #a855f7;
+      }
+      body {
+        font-family: 'Quicksand', sans-serif;
+        background-color: var(--lilac-light);
+        color: #4c1d95;
+        overflow-x: hidden;
+      }
+      .font-romantic {
+        font-family: 'Dancing Script', cursive;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+        10% { opacity: 0.5; }
+        90% { opacity: 0.5; }
+        100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+      }
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 12s linear infinite;
+      }
+      .floating-heart {
+        position: fixed;
+        bottom: -100px;
+        animation: float linear infinite;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      .rotate-x-180 {
+        transform: rotateX(180deg);
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f3f0ff;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d8b4fe;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c084fc;
+      }
+      /* Custom cursor for playful feel */
+      .custom-hover:hover {
+        cursor: pointer;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
